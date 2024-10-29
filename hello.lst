@@ -1,0 +1,49 @@
+A51 MACRO ASSEMBLER  HELLO                                                                04/22/2024 23:18:56 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\hello.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE hello.asm SET(SMALL) DEBUG PRINT(.\Listings\hello.lst) OBJECT(.\Objects
+                      \hello.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0x0000
+0000 7B05              2     mov r3,#0x05
+0002 908000            3     mov dptr,#0x8000
+0005 E0                4     movx a,@dptr
+0006 F9                5     mov r1,a
+0007 1B                6     dec r3
+0008 A3                7     next:inc dptr
+0009 E0                8     movx a,@dptr
+000A FA                9     mov r2,a
+000B 99               10     subb a,r1
+000C 5002             11     jnc skip
+000E EA               12     mov a,r2
+000F F9               13     mov r1,a
+0010 DBF6             14     skip:djnz r3,next
+0012 E9               15     mov a,r1
+0013 758217           16     mov dpl,#0x17
+0016 F0               17     movx @dptr,a
+0017 904000           18     mov dptr,#0x4000
+001A EA               19     mov a,r2
+001B F0               20     movx @dptr,a
+001C 80FE             21     sjmp $
+                      22     end;
+A51 MACRO ASSEMBLER  HELLO                                                                04/22/2024 23:18:56 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DPL. . . . . . . .  D ADDR   0082H   A   
+NEXT . . . . . . .  C ADDR   0008H   A   
+SKIP . . . . . . .  C ADDR   0010H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

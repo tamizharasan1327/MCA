@@ -1,0 +1,22 @@
+org 0x0000
+mov r3,#0x05
+mov dptr,#0x8000
+movx a,@dptr
+mov r1,a
+dec r3
+next:inc dptr
+movx a,@dptr
+mov r2,a
+subb a,r1
+jnc skip
+mov a,r2
+mov r1,a
+skip:djnz r3,next
+mov a,r1
+mov dpl,#0x17
+movx @dptr,a
+mov dptr,#0x4000
+mov a,r2
+movx @dptr,a
+sjmp $
+end;

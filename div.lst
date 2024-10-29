@@ -1,0 +1,39 @@
+A51 MACRO ASSEMBLER  DIV                                                                  04/22/2024 23:56:17 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\div.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE div.asm SET(SMALL) DEBUG PRINT(.\Listings\div.lst) OBJECT(.\Objects\div
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 908000            1     mov dptr,#0x8000
+0003 7402              2     mov a,#0x02 
+0005 F5F0              3     mov b,a      
+0007 7404              4     mov a,#0x04   
+0009 84                5     div ab  
+000A F9                6     mov r1,a
+000B E5F0              7     mov a,b
+000D FA                8     mov r2,a
+000E E9                9     mov a,r1
+000F F0               10     movx @dptr,a
+0010 A3               11     inc dptr
+0011 EA               12     mov a,r2
+0012 F0               13     movx @dptr,a
+                      14     end;
+A51 MACRO ASSEMBLER  DIV                                                                  04/22/2024 23:56:17 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

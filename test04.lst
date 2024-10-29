@@ -1,0 +1,46 @@
+A51 MACRO ASSEMBLER  TEST04                                                               04/23/2024 11:53:28 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\test04.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE test04.asm SET(SMALL) DEBUG PRINT(.\Listings\test04.lst) OBJECT(.\Objec
+                      ts\test04.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 908000            1     mov dptr,#0x8000
+0003 7B05              2     mov r3,#0x05
+0005 E0                3     movx a,@dptr
+0006 F9                4     mov r1,a
+0007 1B                5     dec r3
+0008 A3                6     next:inc dptr
+0009 E0                7     movx a,@dptr
+000A C3                8     clr c
+000B FA                9     mov r2,a
+000C 99               10     subb a,r1
+000D 5002             11     jnc skip
+000F EA               12     mov a,r2
+0010 F9               13     mov r1,a
+0011 DBF5             14     skip:djnz r3,next
+0013 E9               15     mov a,r1
+0014 758217           16     mov dpl,#0x17
+0017 F0               17     movx @dptr,a
+0018 80FE             18     sjmp $ 
+                      19     end;
+A51 MACRO ASSEMBLER  TEST04                                                               04/23/2024 11:53:28 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DPL. . . . . . . .  D ADDR   0082H   A   
+NEXT . . . . . . .  C ADDR   0008H   A   
+SKIP . . . . . . .  C ADDR   0011H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

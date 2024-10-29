@@ -1,0 +1,37 @@
+A51 MACRO ASSEMBLER  ONE_AND_TWO                                                          03/12/2024 00:26:17 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\one_and_two.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE one_and_two.asm SET(SMALL) DEBUG PRINT(.\Listings\one_and_two.lst) OBJE
+                      CT(.\Objects\one_and_two.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 908000            1     mov dptr,#0x8000
+0003 E0                2     movx a,@dptr
+0004 F4                3     cpl a
+0005 F9                4     mov r1,a
+0006 04                5     inc a
+0007 FA                6     mov r2,a
+0008 A3                7     inc dptr
+0009 EA                8     mov a,r2
+000A F0                9     movx @dptr,a
+000B A3               10     inc dptr
+000C E9               11     mov a,r1
+000D F0               12     movx @dptr,a
+                      13     end;
+A51 MACRO ASSEMBLER  ONE_AND_TWO                                                          03/12/2024 00:26:17 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

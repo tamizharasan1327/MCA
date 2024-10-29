@@ -1,0 +1,3 @@
+".\Objects\logesh.obj" 
+TO ".\Objects\logesh" 
+PRINT(".\Listings\logesh.m51")

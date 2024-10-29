@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  MUL                                                                  04/22/2024 23:35:53 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\mul.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE mul.asm SET(SMALL) DEBUG PRINT(.\Listings\mul.lst) OBJECT(.\Objects\mul
+                      .obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 908000            1     mov dptr,#0x8000
+0003 74FF              2     mov a,#0xff
+0005 F5F0              3     mov b,a
+0007 74FF              4     mov a,#0xff
+0009 A4                5     mul ab
+000A F9                6     mov r1,a
+000B E5F0              7     mov a,b  
+000D FA                8     mov r2,a
+000E EA                9     mov a,r2
+000F F0               10     movx @dptr,a  
+0010 A3               11     inc dptr
+0011 E9               12     mov a,r1
+0012 F0               13     movx @dptr,a
+                      14     end;
+                                     
+                                     
+A51 MACRO ASSEMBLER  MUL                                                                  04/22/2024 23:35:53 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
